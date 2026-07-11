@@ -111,9 +111,9 @@ export default function AdminDashboard({ API_URL, onLogout }) {
     return (
       <div className="card animate-fade-in" style={{ maxWidth: '400px', margin: '40px auto' }}>
         <div style={{ textAlign: 'center', marginBottom: '24px' }}>
-          <Shield size={40} style={{ color: 'var(--primary)', marginBottom: '12px' }} />
-          <h2 style={{ fontSize: '1.8rem', color: 'var(--primary)' }}>Couple's Dashboard</h2>
-          <p style={{ color: 'var(--muted)', fontSize: '0.9rem' }}>Enter password to manage photos.</p>
+          <Shield size={40} style={{ color: '#8a434d', marginBottom: '12px', filter: 'drop-shadow(0 2px 8px rgba(255, 253, 250, 0.95))' }} />
+          <h2 style={{ fontSize: '1.9rem', color: '#8a434d', fontWeight: '600', textShadow: '0 2px 8px rgba(255, 253, 250, 0.95)', marginBottom: '8px' }}>Couple's Dashboard</h2>
+          <p style={{ color: 'var(--dark)', fontWeight: '600', textShadow: '0 1px 6px rgba(255, 253, 250, 0.95)', fontSize: '0.95rem' }}>Enter password to manage photos.</p>
         </div>
         <form onSubmit={handleLogin} style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
           <input

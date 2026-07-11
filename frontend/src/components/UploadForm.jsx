@@ -135,8 +135,8 @@ export default function UploadForm({ API_URL }) {
   return (
     <div className="card animate-fade-in" style={{ maxWidth: '480px', margin: '0 auto' }}>
       <div style={{ textAlign: 'center', marginBottom: '24px' }}>
-        <h2 style={{ fontSize: '2rem', color: 'var(--primary)', marginBottom: '8px' }}>Capture the Love</h2>
-        <p style={{ color: 'var(--muted)', fontSize: '0.95rem' }}>
+        <h2 style={{ fontSize: '2.1rem', color: '#8a434d', fontWeight: '600', textShadow: '0 2px 8px rgba(255, 253, 250, 0.95)', marginBottom: '8px' }}>Capture the Love</h2>
+        <p style={{ color: 'var(--dark)', fontWeight: '600', textShadow: '0 1px 6px rgba(255, 253, 250, 0.95)', fontSize: '0.98rem', lineHeight: '1.4' }}>
           Share your beautiful moments from our special day with us.
         </p>
       </div>
