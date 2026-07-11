@@ -31,13 +31,24 @@ body {
   display: flex;
   flex-direction: column;
   overflow-x: hidden;
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
   background-image: 
     linear-gradient(rgba(255, 253, 250, 0.35), rgba(255, 253, 250, 0.45)),
     url('/welcome-bg.jpg');
   background-size: cover;
   background-position: center 25%;
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  pointer-events: none;
 }
 
 /* Elegant scrollbar */
