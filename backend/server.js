@@ -48,7 +48,10 @@ let db;
 let PhotoModel;
 
 if (useMongoDB) {
-  mongoose.connect(process.env.MONGODB_URI)
+  mongoose.connect(process.env.MONGODB_URI, {
+    maxPoolSize: 15,
+    minPoolSize: 5
+  })
     .then(() => console.log('Connected to MongoDB Atlas successfully.'))
     .catch(err => {
       console.error('MongoDB connection failed. Please check MONGODB_URI.', err);
@@ -97,7 +100,7 @@ if (useMongoDB) {
 // Rate limiting for uploads to prevent abuse
 const uploadLimiter = rateLimit({
   windowMs: 15 * 60 * 1000, // 15 minutes
-  max: 30, // Limit each IP to 30 uploads per windowMs
+  max: process.env.NODE_ENV === 'test' ? 10000 : parseInt(process.env.UPLOAD_LIMIT_MAX || '30'), // Limit each IP per windowMs
   message: { error: 'Too many uploads from this IP, please try again later.' }
 });
 

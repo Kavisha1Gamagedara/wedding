@@ -1,0 +1,19 @@
+config:
+  target: "https://wedding-ohup.onrender.com"
+  phases:
+    - duration: 30
+      arrivalRate: 2
+      rampTo: 5
+      name: Warm up
+    - duration: 30
+      arrivalRate: 5
+      name: Peak load
+scenarios:
+  - name: "Guest uploads photo metadata"
+    flow:
+      - post:
+          url: "/api/upload"
+          json:
+            uploader_name: "Artillery Test Guest"
+            filepath: "https://res.cloudinary.com/demo/image/upload/sample.jpg"
+            cloudinary_public_id: "sample"
