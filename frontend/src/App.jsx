@@ -69,9 +69,11 @@ function App() {
               style={{ 
                 padding: '8px 16px', 
                 fontSize: '0.85rem',
-                border: view === 'upload' ? '1px solid var(--primary)' : '1px solid rgba(230, 194, 128, 0.4)',
-                color: view === 'upload' ? 'var(--primary)' : 'var(--dark)',
-                backgroundColor: view === 'upload' ? 'rgba(183, 110, 121, 0.05)' : 'transparent'
+                border: view === 'upload' ? '2px solid var(--primary)' : '1.5px solid rgba(183, 110, 121, 0.4)',
+                color: view === 'upload' ? '#8a434d' : 'var(--dark)',
+                backgroundColor: view === 'upload' ? 'rgba(183, 110, 121, 0.12)' : 'rgba(255, 253, 250, 0.7)',
+                fontWeight: '600',
+                boxShadow: '0 2px 6px rgba(44, 34, 36, 0.05)'
               }}
             >
               <Camera size={14} />
@@ -84,7 +86,11 @@ function App() {
               style={{ 
                 padding: '8px 16px', 
                 fontSize: '0.85rem',
-                border: '1px solid rgba(230, 194, 128, 0.4)'
+                border: view === 'slideshow' ? '2px solid var(--primary)' : '1.5px solid rgba(183, 110, 121, 0.4)',
+                color: view === 'slideshow' ? '#8a434d' : 'var(--dark)',
+                backgroundColor: view === 'slideshow' ? 'rgba(183, 110, 121, 0.12)' : 'rgba(255, 253, 250, 0.7)',
+                fontWeight: '600',
+                boxShadow: '0 2px 6px rgba(44, 34, 36, 0.05)'
               }}
             >
               <Play size={14} />
@@ -97,9 +103,11 @@ function App() {
               style={{ 
                 padding: '8px 16px', 
                 fontSize: '0.85rem',
-                border: view === 'admin' ? '1px solid var(--primary)' : '1px solid rgba(230, 194, 128, 0.4)',
-                color: view === 'admin' ? 'var(--primary)' : 'var(--dark)',
-                backgroundColor: view === 'admin' ? 'rgba(183, 110, 121, 0.05)' : 'transparent'
+                border: view === 'admin' ? '2px solid var(--primary)' : '1.5px solid rgba(183, 110, 121, 0.4)',
+                color: view === 'admin' ? '#8a434d' : 'var(--dark)',
+                backgroundColor: view === 'admin' ? 'rgba(183, 110, 121, 0.12)' : 'rgba(255, 253, 250, 0.7)',
+                fontWeight: '600',
+                boxShadow: '0 2px 6px rgba(44, 34, 36, 0.05)'
               }}
             >
               <Shield size={14} />
@@ -131,9 +139,11 @@ function App() {
         <footer style={{
           textAlign: 'center',
           padding: '24px',
-          color: 'var(--muted)',
-          fontSize: '0.8rem',
-          borderTop: '1px solid rgba(230,194,128,0.15)',
+          color: 'var(--dark)',
+          fontWeight: '600',
+          textShadow: '0 1px 4px rgba(255, 253, 250, 0.95)',
+          fontSize: '0.82rem',
+          borderTop: '1px solid rgba(183, 110, 121, 0.25)',
           maxWidth: '1200px',
           width: '100%',
           margin: '40px auto 0 auto'
